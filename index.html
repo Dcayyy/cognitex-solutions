@@ -2,9 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dummy Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header, footer {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
+
+<header>
+    <h1>Welcome to My Dummy Website</h1>
+</header>
+
+<main>
+    <p>This is a simple static website with Voiceflow AI integration.</p>
+    <p>Talk to our chatbot below!</p>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Dummy Website</p>
+</footer>
+
+<!-- Voiceflow AI Chatbot Script -->
+<script>
+    (function(d, t) {
+        var vflow = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        vflow.src = "YOUR_VOICEFLOW_EMBED_URL_HERE"; // Replace with your actual embed URL
+        vflow.async = true;
+        s.parentNode.insertBefore(vflow, s);
+    })(document, 'script');
+</script>
 
 </body>
 </html>
