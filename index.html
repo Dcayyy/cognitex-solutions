@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI Automation Business</title>
     <style>
-        /* Reset & Global Styles */
+        /* Global Reset & Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body, html {
+        html,
+        body {
             width: 100%;
             height: 100%;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             scroll-behavior: smooth;
         }
         a {
@@ -27,17 +28,17 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            z-index: 100;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.6);
         }
         header .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
+            color: #fff;
         }
         header nav ul {
             list-style: none;
@@ -49,23 +50,52 @@
             transition: color 0.3s ease;
         }
         header nav ul li a:hover {
-            color: #ff9800;
+            color: #ff7f50; /* Coral */
         }
 
-        /* Hero Section */
+        /* Hero Section with Background Video */
         .hero {
+            position: relative;
             height: 100vh;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            width: 100%;
+            overflow: hidden;
+        }
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: brightness(0.7);
+            z-index: -2;
+        }
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+        .hero .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
+            height: 100%;
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInDown 1s ease-out;
         }
@@ -75,28 +105,38 @@
             animation: fadeInUp 1s ease-out;
         }
         .hero .cta-btn {
-            background: #ff9800;
+            background: #ff7f50; /* Coral */
             color: #fff;
-            padding: 0.75rem 2rem;
             border: none;
-            border-radius: 30px;
-            font-size: 1rem;
+            padding: 0.8rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease;
         }
         .hero .cta-btn:hover {
-            background: #e68900;
+            background: #ff6347; /* Tomato */
             transform: scale(1.05);
         }
-
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Features Section */
@@ -106,7 +146,7 @@
             text-align: center;
         }
         .features h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
             color: #333;
         }
@@ -123,7 +163,7 @@
             gap: 2rem;
         }
         .feature-card {
-            background: #f9f9f9;
+            background: #f7f7f7;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -141,7 +181,7 @@
         }
         .feature-card p {
             color: #555;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         /* Contact Section */
@@ -151,7 +191,7 @@
             text-align: center;
         }
         .contact h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
             color: #333;
         }
@@ -162,17 +202,17 @@
             color: #666;
         }
         .contact .cta-btn {
-            background: #ff9800;
+            background: #ff7f50;
             color: #fff;
-            padding: 0.75rem 2rem;
             border: none;
-            border-radius: 30px;
-            font-size: 1rem;
+            padding: 0.8rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease;
         }
         .contact .cta-btn:hover {
-            background: #e68900;
+            background: #ff6347;
             transform: scale(1.05);
         }
 
@@ -203,7 +243,6 @@
     </style>
 </head>
 <body>
-
 <!-- Header -->
 <header>
     <div class="logo">AI Automation</div>
@@ -216,37 +255,54 @@
     </nav>
 </header>
 
-<!-- Hero Section -->
+<!-- Hero Section with Background Video -->
 <section id="hero" class="hero">
-    <h1>Revolutionize Your Business with AI Automation</h1>
-    <p>Harness the power of AI to streamline operations, improve customer engagement, and drive exponential growth.</p>
-    <button class="cta-btn" onclick="openChat()">Chat with Our AI</button>
+    <video autoplay muted loop playsinline>
+        <source src="your-ai-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Experience the Future of AI</h1>
+        <p>Immerse yourself in a world of advanced AI automation that transforms your business in real time.</p>
+        <button class="cta-btn" onclick="openChat()">Chat with Our AI</button>
+    </div>
 </section>
 
 <!-- Features Section -->
 <section id="features" class="features">
-    <h2>Our Cutting-Edge Features</h2>
-    <p>Experience seamless AI-driven automation designed to transform your business landscape.</p>
+    <h2>Innovative Features</h2>
+    <p>
+        Explore cutting-edge solutions designed to elevate your business efficiency and engagement.
+    </p>
     <div class="feature-cards">
         <div class="feature-card">
-            <h3>Smart Automation</h3>
-            <p>Automate routine tasks and focus on strategic initiatives.</p>
+            <h3>Intelligent Automation</h3>
+            <p>
+                Streamline your workflows with AI-driven processes and dynamic decision-making.
+            </p>
         </div>
         <div class="feature-card">
-            <h3>24/7 Support</h3>
-            <p>Our AI assistant is available around the clock to assist your needs.</p>
+            <h3>Real-Time Insights</h3>
+            <p>
+                Gain actionable insights through powerful analytics and data-driven intelligence.
+            </p>
         </div>
         <div class="feature-card">
-            <h3>Scalable Solutions</h3>
-            <p>Grow without limits with robust and scalable AI infrastructure.</p>
+            <h3>Seamless Integration</h3>
+            <p>
+                Easily integrate our AI solutions with your existing tech stack for maximum impact.
+            </p>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="contact">
-    <h2>Ready to Transform Your Business?</h2>
-    <p>Connect with us or engage our AI chatbot to discover how our automation solutions can elevate your operations.</p>
+    <h2>Let's Connect</h2>
+    <p>
+        Ready to revolutionize your business? Engage with our AI assistant or reach out to our team today.
+    </p>
     <button class="cta-btn" onclick="openChat()">Start Chat</button>
 </section>
 
@@ -258,11 +314,9 @@
 <!-- Voiceflow AI Chatbot Script -->
 <script type="text/javascript">
     function openChat() {
-        // If the Voiceflow chat widget is loaded, open the chat window
         if (window.voiceflow && window.voiceflow.chat) {
             window.voiceflow.chat.open();
         } else {
-            // Retry after a short delay if the widget is not yet available
             setTimeout(() => {
                 if (window.voiceflow && window.voiceflow.chat) {
                     window.voiceflow.chat.open();
@@ -273,19 +327,20 @@
         }
     }
 
-    (function(d, t) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
+    (function (d, t) {
+        var v = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
             window.voiceflow.chat.load({
-                verify: { projectID: '67aae7ddc0b42786788ae81a' },
-                url: 'https://general-runtime.voiceflow.com',
-                versionID: 'production'
+                verify: { projectID: "67aae7ddc0b42786788ae81a" },
+                url: "https://general-runtime.voiceflow.com",
+                versionID: "production",
             });
-        }
+        };
         v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
         v.type = "text/javascript";
         s.parentNode.insertBefore(v, s);
-    })(document, 'script');
+    })(document, "script");
 </script>
 </body>
 </html>
