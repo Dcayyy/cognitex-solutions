@@ -25,31 +25,32 @@
 
         /* Header */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Places logo on left, nav on right */
             align-items: center;
             padding: 1rem 2rem;
-            background: rgba(0, 0, 0, 0.6);
+            background: linear-gradient(135deg, #343a40, #212529);
         }
-        header .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #fff;
+
+        .logo img {
+            width: 100px; /* Adjust size as needed */
+            height: auto;
         }
-        header nav ul {
+
+        .nav ul {
             list-style: none;
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
         }
-        header nav ul li a {
+
+        .nav ul li a {
             color: #fff;
+            text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
-        header nav ul li a:hover {
+
+        .nav ul li a:hover {
             color: #ff7f50;
         }
 
@@ -211,11 +212,10 @@
     <div class="logo">
         <img src="logo.png" alt="AI Automation Logo">
     </div>
-    <nav>
+    <nav class="nav">
         <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
         </ul>
     </nav>
 </header>
