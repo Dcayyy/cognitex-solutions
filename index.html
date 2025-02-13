@@ -11,11 +11,10 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html,
-        body {
+        html, body {
             width: 100%;
             height: 100%;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             scroll-behavior: smooth;
         }
         a {
@@ -23,7 +22,7 @@
             color: inherit;
         }
 
-        /* Header */
+        /* Header (Optional: Adjust as needed) */
         header {
             position: fixed;
             top: 0;
@@ -50,17 +49,24 @@
             transition: color 0.3s ease;
         }
         header nav ul li a:hover {
-            color: #ff7f50; /* Coral */
+            color: #ff7f50;
         }
 
-        /* Hero Section with Background Video */
+        /* Hero Section */
         .hero {
             position: relative;
             height: 100vh;
             width: 100%;
             overflow: hidden;
         }
-        .hero video {
+        /* Content div with the background video */
+        .content {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        /* Background Video */
+        .bg-video {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -70,138 +76,43 @@
             height: auto;
             transform: translate(-50%, -50%);
             object-fit: cover;
+            z-index: 1;
             filter: brightness(0.7);
-            z-index: -2;
         }
-        .hero .overlay {
+        /* Overlay for text readability */
+        .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: -1;
+            background: rgba(0,0,0,0.3);
+            z-index: 2;
         }
-        .hero .content {
+        /* Text Content on Top */
+        .text-content {
             position: relative;
-            z-index: 1;
+            z-index: 3;
             text-align: center;
             color: #fff;
-            padding: 0 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100%;
+            padding: 20px;
         }
-        .hero h1 {
+        .text-content h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInDown 1s ease-out;
         }
-        .hero p {
+        .text-content p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease-out;
         }
-        .hero .cta-btn {
-            background: #ff7f50; /* Coral */
-            color: #fff;
-            border: none;
-            padding: 0.8rem 2.5rem;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-        .hero .cta-btn:hover {
-            background: #ff6347; /* Tomato */
-            transform: scale(1.05);
-        }
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Features Section */
-        .features {
-            padding: 4rem 2rem;
-            background: #fff;
-            text-align: center;
-        }
-        .features h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        .features p {
-            font-size: 1rem;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            color: #666;
-        }
-        .feature-cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        .feature-card {
-            background: #f7f7f7;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            max-width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-        }
-        .feature-card h3 {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        .feature-card p {
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 4rem 2rem;
-            background: #f0f0f0;
-            text-align: center;
-        }
-        .contact h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        .contact p {
-            font-size: 1rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: #666;
-        }
-        .contact .cta-btn {
+        .cta-btn {
             background: #ff7f50;
             color: #fff;
             border: none;
@@ -211,17 +122,18 @@
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease;
         }
-        .contact .cta-btn:hover {
+        .cta-btn:hover {
             background: #ff6347;
             transform: scale(1.05);
         }
 
-        /* Footer */
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem;
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Responsive Adjustments */
@@ -229,21 +141,17 @@
             header {
                 flex-direction: column;
             }
-            .hero h1 {
+            .text-content h1 {
                 font-size: 2.5rem;
             }
-            .hero p {
+            .text-content p {
                 font-size: 1rem;
-            }
-            .feature-cards {
-                flex-direction: column;
-                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-<!-- Header -->
+<!-- Header (Optional) -->
 <header>
     <div class="logo">AI Automation</div>
     <nav>
@@ -255,61 +163,26 @@
     </nav>
 </header>
 
-<!-- Hero Section with Background Video -->
+<!-- Hero Section with Video Background Inside Content Div -->
 <section id="hero" class="hero">
-    <video autoplay muted loop playsinline>
-        <source src="your-ai-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-    </video>
-    <div class="overlay"></div>
     <div class="content">
-        <h1>Experience the Future of AI</h1>
-        <p>Immerse yourself in a world of advanced AI automation that transforms your business in real time.</p>
-        <button class="cta-btn" onclick="openChat()">Chat with Our AI</button>
-    </div>
-</section>
-
-<!-- Features Section -->
-<section id="features" class="features">
-    <h2>Innovative Features</h2>
-    <p>
-        Explore cutting-edge solutions designed to elevate your business efficiency and engagement.
-    </p>
-    <div class="feature-cards">
-        <div class="feature-card">
-            <h3>Intelligent Automation</h3>
-            <p>
-                Streamline your workflows with AI-driven processes and dynamic decision-making.
-            </p>
-        </div>
-        <div class="feature-card">
-            <h3>Real-Time Insights</h3>
-            <p>
-                Gain actionable insights through powerful analytics and data-driven intelligence.
-            </p>
-        </div>
-        <div class="feature-card">
-            <h3>Seamless Integration</h3>
-            <p>
-                Easily integrate our AI solutions with your existing tech stack for maximum impact.
-            </p>
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="3129977-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Overlay for improved text visibility -->
+        <div class="overlay"></div>
+        <!-- Text Content -->
+        <div class="text-content">
+            <h1>Experience the Future of AI</h1>
+            <p>Immerse yourself in advanced AI automation that transforms your business in real time.</p>
+            <button class="cta-btn" onclick="openChat()">Chat with Our AI</button>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <h2>Let's Connect</h2>
-    <p>
-        Ready to revolutionize your business? Engage with our AI assistant or reach out to our team today.
-    </p>
-    <button class="cta-btn" onclick="openChat()">Start Chat</button>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 AI Automation. All Rights Reserved.</p>
-</footer>
+<!-- Additional Sections (Features, Contact, etc.) can be added below -->
 
 <!-- Voiceflow AI Chatbot Script -->
 <script type="text/javascript">
@@ -334,7 +207,7 @@
             window.voiceflow.chat.load({
                 verify: { projectID: "67aae7ddc0b42786788ae81a" },
                 url: "https://general-runtime.voiceflow.com",
-                versionID: "production",
+                versionID: "production"
             });
         };
         v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
