@@ -11,12 +11,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html,
-        body {
+        html, body {
             width: 100%;
             height: 100%;
             font-family: Arial, sans-serif;
             scroll-behavior: smooth;
+            background: none; /* Remove any default background */
         }
         a {
             text-decoration: none;
@@ -25,31 +25,31 @@
 
         /* Header */
         header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
             display: flex;
-            justify-content: space-between; /* Places logo on left, nav on right */
+            justify-content: space-between; /* Logo left, nav right */
             align-items: center;
             padding: 1rem 2rem;
-            background: linear-gradient(135deg, #343a40, #212529);
+            background: transparent; /* Transparent to show the video */
+            z-index: 10;
         }
-
         .logo img {
-            width: 100px; /* Adjust size as needed */
+            width: 150px; /* Bigger logo */
             height: auto;
         }
-
         .nav ul {
             list-style: none;
             display: flex;
             gap: 1rem;
         }
-
         .nav ul li a {
             color: #fff;
-            text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
-
         .nav ul li a:hover {
             color: #ff7f50;
         }
@@ -60,7 +60,6 @@
             height: 100vh;
             width: 100%;
             overflow: hidden;
-            /*margin-top: 50px; !* adjust to header height *!*/
         }
         .content {
             position: relative;
@@ -125,7 +124,6 @@
             background: #ff6347;
             transform: scale(1.05);
         }
-
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -261,8 +259,6 @@
         </div>
     </div>
 </section>
-
-<!-- (Optional) Contact Section can be added here -->
 
 <!-- Footer -->
 <footer>
