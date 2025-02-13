@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI Automation Business</title>
-    <!-- Google Fonts for a modern look -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <style>
         /* Global Reset & Styles */
         * {
@@ -13,35 +11,55 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html, body {
-            font-family: 'Roboto', sans-serif;
+        html,
+        body {
+            width: 100%;
             height: 100%;
-            background: #f8f9fa;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         /* Header */
         header {
             position: fixed;
             top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, #343a40, #212529);
-            color: #fff;
-            padding: 1rem 2rem;
-            text-align: center;
+            width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.6);
         }
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
         }
-        /* Hero Section */
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        header nav ul li a {
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+        header nav ul li a:hover {
+            color: #ff7f50;
+        }
+
+        /* Hero Section with Background Video */
         .hero {
             position: relative;
-            margin: 0; /* No gap between header and hero */
             height: 100vh;
+            width: 100%;
             overflow: hidden;
-            padding-top: 0; /* Ensure no extra padding */
+            /*margin-top: 70px; !* adjust to header height *!*/
         }
         .content {
             position: relative;
@@ -50,11 +68,15 @@
         }
         .bg-video {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
             object-fit: cover;
+            z-index: 1;
             filter: brightness(0.7);
         }
         .overlay {
@@ -64,10 +86,11 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.3);
+            z-index: 2;
         }
         .text-content {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             text-align: center;
             color: #fff;
             display: flex;
@@ -80,10 +103,12 @@
         .text-content h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
         }
         .text-content p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out;
         }
         .cta-btn {
             background: #ff7f50;
@@ -99,23 +124,105 @@
             background: #ff6347;
             transform: scale(1.05);
         }
-        /* Prevent content from starting below a white background */
-        body::before {
-            content: "";
-            display: block;
-            height: 0;
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Featured Collection Section */
+        .features {
+            padding: 4rem 2rem;
+            background: #fff;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .features p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color: #666;
+        }
+        .feature-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .feature-card {
+            background: #f7f7f7;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .feature-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+            .text-content h1 {
+                font-size: 2.5rem;
+            }
+            .text-content p {
+                font-size: 1rem;
+            }
+            .feature-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
         }
     </style>
 </head>
 <body>
+<!-- Header -->
 <header>
-    <h1>AI Automation</h1>
+    <div class="logo">AI Automation</div>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
+<!-- Hero Section with Background Video -->
 <section id="hero" class="hero">
     <div class="content">
         <video autoplay muted loop playsinline class="bg-video">
-            <source src="3129977-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            <source src="LandingPageVideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>
@@ -127,8 +234,41 @@
     </div>
 </section>
 
-<!-- Floating Chat Button and Voiceflow AI Chatbot Script (if needed) -->
-<script>
+<!-- Featured Collection Section -->
+<section id="features" class="features">
+    <h2>Innovative Features</h2>
+    <p>Explore cutting-edge solutions designed to elevate your business efficiency and engagement.</p>
+    <div class="feature-cards">
+        <div class="feature-card">
+            <a href="intelligent-automation.html" style="color: inherit; text-decoration: none;">
+                <h3>Intelligent Automation</h3>
+                <p>Streamline your workflows with AI-driven processes and dynamic decision-making.</p>
+            </a>
+        </div>
+        <div class="feature-card">
+            <a href="real-time-insights.html" style="color: inherit; text-decoration: none;">
+                <h3>Real-Time Insights</h3>
+                <p>Gain actionable insights through powerful analytics and data-driven intelligence.</p>
+            </a>
+        </div>
+        <div class="feature-card">
+            <a href="seamless-integration.html" style="color: inherit; text-decoration: none;">
+                <h3>Seamless Integration</h3>
+                <p>Easily integrate our AI solutions with your existing tech stack for maximum impact.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- (Optional) Contact Section can be added here -->
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 AI Automation. All Rights Reserved.</p>
+</footer>
+
+<!-- Voiceflow AI Chatbot Script -->
+<script type="text/javascript">
     function openChat() {
         if (window.voiceflow && window.voiceflow.chat) {
             window.voiceflow.chat.open();
@@ -143,9 +283,10 @@
         }
     }
 
-    (function(d, t) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
+    (function (d, t) {
+        var v = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
             window.voiceflow.chat.load({
                 verify: { projectID: "67aae7ddc0b42786788ae81a" },
                 url: "https://general-runtime.voiceflow.com",
