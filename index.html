@@ -66,12 +66,17 @@
 </footer>
 
 <!-- Voiceflow AI Chatbot Script -->
-<script>
+<script type="text/javascript">
     (function(d, t) {
-        var vflow = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        vflow.src = "YOUR_VOICEFLOW_EMBED_URL_HERE"; // Replace with your actual embed URL
-        vflow.async = true;
-        s.parentNode.insertBefore(vflow, s);
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+            window.voiceflow.chat.load({
+                verify: { projectID: '67aae7ddc0b42786788ae81a' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production'
+            });
+        }
+        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
     })(document, 'script');
 </script>
 
