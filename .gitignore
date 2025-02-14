@@ -1,10 +1,5 @@
 # Ignore all files in the .idea folder except for the ones needed for version control
 .idea/*
-!.idea/description.*
-!.idea/modules.xml
-!.idea/*.iml
-!.idea/vcs.xml
-!.idea/workspace.xml
 
 # Ignore IntelliJ project files
 *.iws
