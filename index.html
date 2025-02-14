@@ -296,5 +296,17 @@
         s.parentNode.insertBefore(v, s);
     })(document, "script");
 </script>
+
+<script>
+    window.addEventListener('load', function() {
+        // Replace 'voiceflow_conversation' with the actual key if known.
+        // If you're unsure of the key and want to clear all storage (be cautious if you have other local data):
+        // localStorage.clear();
+
+        // For a more targeted approach, try:
+        localStorage.removeItem('voiceflow_conversation');
+    });
+</script>
+
 </body>
 </html>
