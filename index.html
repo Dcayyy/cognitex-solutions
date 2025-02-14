@@ -4,211 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cognitex Solutions</title>
-    <style>
-        /* Global Reset & Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
-            width: 100%;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            scroll-behavior: smooth;
-            background: none; /* Remove any default background */
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Header */
-        header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between; /* Logo left, nav right */
-            align-items: center;
-            padding: 1rem 2rem;
-            background: transparent; /* Transparent to show the video */
-            z-index: 10;
-        }
-        .logo img {
-            width: 225px; /* Bigger logo */
-            height: auto;
-        }
-        .nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-        }
-        .nav ul li a {
-            color: #fff;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        .nav ul li a:hover {
-            color: #ff7f50;
-        }
-
-        /* Hero Section with Background Video */
-        .hero {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-        }
-        .content {
-            position: relative;
-            height: 100%;
-            width: 100%;
-        }
-        .bg-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            z-index: 1;
-            filter: brightness(0.7);
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 2;
-        }
-        .text-content {
-            position: relative;
-            z-index: 3;
-            text-align: center;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            padding: 20px;
-        }
-        .text-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInDown 1s ease-out;
-        }
-        .text-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
-        .cta-btn {
-            background: #ff7f50;
-            color: #fff;
-            border: none;
-            padding: 0.8rem 2.5rem;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-        .cta-btn:hover {
-            background: #ff6347;
-            transform: scale(1.05);
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Featured Collection Section */
-        .features {
-            padding: 4rem 2rem;
-            background: #fff;
-            text-align: center;
-        }
-        .features h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        .features p {
-            font-size: 1rem;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            color: #666;
-        }
-        .feature-cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        .feature-card {
-            background: #f7f7f7;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            max-width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-        }
-        .feature-card h3 {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        .feature-card p {
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
-            .text-content h1 {
-                font-size: 2.5rem;
-            }
-            .text-content p {
-                font-size: 1rem;
-            }
-            .feature-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/landing-page-styles.css">
 </head>
 <body>
 <!-- Header -->
 <header>
     <div class="logo">
-        <img src="logo.png" alt="AI Automation Logo">
+        <img src="assets/logo/logo.png" alt="AI Automation Logo">
     </div>
     <nav class="nav">
         <ul>
@@ -222,7 +24,7 @@
 <section id="hero" class="hero">
     <div class="content">
         <video autoplay muted loop playsinline class="bg-video">
-            <source src="landing-page-vide.mp4" type="video/mp4" />
+            <source src="assets/videos/landing-page-vide.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>
@@ -265,48 +67,6 @@
     <p>&copy; 2025 AI Automation. All Rights Reserved.</p>
 </footer>
 
-<!-- Voiceflow AI Chatbot Script -->
-<script type="text/javascript">
-    function openChat() {
-        if (window.voiceflow && window.voiceflow.chat) {
-            window.voiceflow.chat.open();
-        } else {
-            setTimeout(() => {
-                if (window.voiceflow && window.voiceflow.chat) {
-                    window.voiceflow.chat.open();
-                } else {
-                    console.error('Voiceflow chat widget is not loaded yet.');
-                }
-            }, 500);
-        }
-    }
-
-    (function (d, t) {
-        var v = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        v.onload = function () {
-            window.voiceflow.chat.load({
-                verify: { projectID: "67aae7ddc0b42786788ae81a" },
-                url: "https://general-runtime.voiceflow.com",
-                versionID: "production"
-            });
-        };
-        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-        v.type = "text/javascript";
-        s.parentNode.insertBefore(v, s);
-    })(document, "script");
-</script>
-
-<script>
-    window.addEventListener('load', function() {
-        // Replace 'voiceflow_conversation' with the actual key if known.
-        // If you're unsure of the key and want to clear all storage (be cautious if you have other local data):
-        // localStorage.clear();
-
-        // For a more targeted approach, try:
-        localStorage.removeItem('voiceflow_conversation');
-    });
-</script>
-
+<script src="./js/landing-page.js"></script>
 </body>
 </html>
