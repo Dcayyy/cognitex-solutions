@@ -1,0 +1,84 @@
+/* About Us Section */
+.about-us {
+    padding: 4rem 2rem;
+    background: #fff;
+}
+
+.about-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-us p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+/* Cards for Mission and Vision */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: #f7f7f7;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Values Section */
+.values {
+    background: #f7f7f7;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.values h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.value-item h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.value-item p {
+    color: #666;
+}

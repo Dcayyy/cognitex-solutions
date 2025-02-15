@@ -1,0 +1,37 @@
+/* Header Styles */
+header {
+    position: fixed; /* Keeps the header at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Fixed height for header */
+    padding: 0 2rem; /* Horizontal padding only */
+    background: transparent;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically centers both logo and nav */
+}
+
+.logo img {
+    max-height: 125px; /* Allow the logo to scale proportionally up to 80px */
+    height: auto;
+    width: auto;
+}
+
+/* Navigation */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #ff7f50;
+}
