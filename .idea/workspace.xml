@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d1e515f-fb6f-4f6a-a985-80d29e190505" name="Changes" comment="Refresh chat history on refresh" />
+    <list default="true" id="8d1e515f-fb6f-4f6a-a985-80d29e190505" name="Changes" comment="Replace html/css website with React App" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,23 +29,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/zahar/WebstormProjects/dummy-website",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "two.files.diff.last.used.folder": "C:/Users/zahar/WebstormProjects/dummy-website",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zahar/WebstormProjects/dummy-website&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/zahar/WebstormProjects/dummy-website&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\zahar\WebstormProjects\dummy-website" />
@@ -81,6 +81,7 @@
       <updated>1739473995854</updated>
       <workItem from="1739473996895" duration="5198000" />
       <workItem from="1739512382612" duration="2812000" />
+      <workItem from="1739654928749" duration="377000" />
     </task>
     <task id="LOCAL-00001" summary="changed index">
       <option name="closed" value="true" />
@@ -338,7 +339,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739513620674</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Replace html/css website with React App">
+      <option name="closed" value="true" />
+      <created>1739655289586</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1739655289586</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Replace html/css website with React App">
+      <option name="closed" value="true" />
+      <created>1739655298878</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1739655298878</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,6 +389,7 @@
     <MESSAGE value="Added original logo" />
     <MESSAGE value="Fixed videos" />
     <MESSAGE value="Refresh chat history on refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refresh chat history on refresh" />
+    <MESSAGE value="Replace html/css website with React App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replace html/css website with React App" />
   </component>
 </project>
