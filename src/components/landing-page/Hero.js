@@ -66,7 +66,7 @@ const HeroSection = ({ isMobile }) => {
                         fontSize: isMobile ? "1rem" : "1.2rem",
                         maxWidth: "750px",
                         color: "white",
-                        marginTop: "-1.5rem",
+                        marginTop: isMobile ? "-0.7rem" : "-1.5rem",
                     }}
                 >
                     Immerse yourself in advanced AI automation that transforms your business in real time.

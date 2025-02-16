@@ -15,7 +15,17 @@ const HeaderNavigation = ({
     return (
         <>
             <Header style={headerStyle}>
-                <img src={logo} alt="Cognitex Solutions Logo" style={logoStyle} />
+                <img
+                    src={logo}
+                    alt="Cognitex Solutions Logo"
+                    style={{
+                        ...logoStyle,
+                        // For mobile devices, move the logo down and to the left.
+                        // Adjust these values until you like the positioning:
+                        marginTop: isMobile ? "40px" : logoStyle.marginTop,
+                        marginLeft: isMobile ? "20px" : logoStyle.marginLeft,
+                    }}
+                />
 
                 {isMobile ? (
                     <Button
@@ -99,7 +109,8 @@ const HeaderNavigation = ({
                     onClose={toggleDrawer}
                     visible={drawerVisible}
                 >
-                    <Menu mode="vertical" theme="dark">
+                    <Menu mode="vertical" theme="light">
+                        {/* You can adjust Menu styles here if needed */}
                         <Menu.Item
                             key="home"
                             onClick={() => {

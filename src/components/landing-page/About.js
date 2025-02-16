@@ -147,7 +147,7 @@ const AboutSection = ({ isMobile }) => {
                                         padding: "0 20px",
                                     }}
                                 >
-                                    <div style={{ maxWidth: "250px", margin: "0 auto" }}>
+                                    <div style={{ maxWidth: "250px", margin: "0 auto", padding: "0.4rem" }}>
                                         <Title level={4} style={{ color: "#333", marginBottom: "0.5rem" }}>
                                             {value}
                                         </Title>

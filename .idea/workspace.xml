@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d1e515f-fb6f-4f6a-a985-80d29e190505" name="Changes" comment="Refactored website">
+    <list default="true" id="8d1e515f-fb6f-4f6a-a985-80d29e190505" name="Changes" comment="Improved responsiveness for mobile/14inch/24inch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/landing-page/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing-page/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-page/Features.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing-page/Features.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing-page/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing-page/HeaderNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing-page/Hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing-page/Hero.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,7 @@
       <updated>1739473995854</updated>
       <workItem from="1739473996895" duration="5198000" />
       <workItem from="1739512382612" duration="2812000" />
-      <workItem from="1739654928749" duration="6042000" />
+      <workItem from="1739654928749" duration="6806000" />
     </task>
     <task id="LOCAL-00001" summary="changed index">
       <option name="closed" value="true" />
@@ -482,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739686918596</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Improved responsiveness for mobile/14inch/24inch">
+      <option name="closed" value="true" />
+      <created>1739687798956</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1739687798956</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,6 +529,7 @@
     <MESSAGE value="Added redirects file" />
     <MESSAGE value="Improved Responsiveness, removed unused files" />
     <MESSAGE value="Refactored website" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored website" />
+    <MESSAGE value="Improved responsiveness for mobile/14inch/24inch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved responsiveness for mobile/14inch/24inch" />
   </component>
 </project>
