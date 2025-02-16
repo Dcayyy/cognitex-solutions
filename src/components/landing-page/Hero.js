@@ -2,10 +2,13 @@ import React from "react";
 import { Typography } from "antd";
 import backgroundVideo from "../../assets/videos/landing-page-seamless-loop.mp4";
 import EngagingButton from "../EngagingButton";
+import {Voiceflow} from "../Voiceflow";
 
 const { Title, Paragraph } = Typography;
 
 const HeroSection = ({ isMobile }) => {
+    const { agentLoaded, openChat } = Voiceflow();
+
     return (
         <section
             id="hero"
@@ -71,15 +74,7 @@ const HeroSection = ({ isMobile }) => {
                 >
                     Immerse yourself in advanced AI automation that transforms your business in real time.
                 </Paragraph>
-                <EngagingButton
-                    onClick={() => {
-                        if (window.voiceflow && window.voiceflow.chat) {
-                            window.voiceflow.chat.open();
-                        } else {
-                            console.error("Voiceflow chat widget not loaded");
-                        }
-                    }}
-                >
+                <EngagingButton onClick={openChat}>
                     Chat with Our AI
                 </EngagingButton>
             </div>

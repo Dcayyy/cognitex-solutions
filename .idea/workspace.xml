@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d1e515f-fb6f-4f6a-a985-80d29e190505" name="Changes" comment="Fixed logo">
+    <list default="true" id="8d1e515f-fb6f-4f6a-a985-80d29e190505" name="Changes" comment="Fixed AI Agent to load up custom form. Improved performance and code readability">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Voiceflow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Voiceflow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing-page/Hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing-page/Hero.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/landing-page/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing-page/LandingPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,25 +40,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/zahar/WebstormProjects/dummy-website/public&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/zahar/WebstormProjects/dummy-website&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/zahar/WebstormProjects/dummy-website/public",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "two.files.diff.last.used.folder": "C:/Users/zahar/WebstormProjects/dummy-website",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\zahar\WebstormProjects\dummy-website\public" />
@@ -99,15 +99,8 @@
       <workItem from="1739473996895" duration="5198000" />
       <workItem from="1739512382612" duration="2812000" />
       <workItem from="1739654928749" duration="8987000" />
-      <workItem from="1739695550521" duration="7583000" />
-    </task>
-    <task id="LOCAL-00005" summary="Improved overall webpage">
-      <option name="closed" value="true" />
-      <created>1739474790416</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1739474790416</updated>
+      <workItem from="1739695550521" duration="7750000" />
+      <workItem from="1739706235520" duration="364000" />
     </task>
     <task id="LOCAL-00006" summary="Improved overall webpage">
       <option name="closed" value="true" />
@@ -493,7 +486,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739689249174</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Fixed AI Agent to load up custom form. Improved performance and code readability">
+      <option name="closed" value="true" />
+      <created>1739706214264</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1739706214264</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed index" />
     <MESSAGE value="Added voiceflow ai agent" />
     <MESSAGE value="Improved overall webpage" />
     <MESSAGE value="improved additional page" />
@@ -536,6 +536,7 @@
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Added favicon" />
     <MESSAGE value="Fixed logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed logo" />
+    <MESSAGE value="Fixed AI Agent to load up custom form. Improved performance and code readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed AI Agent to load up custom form. Improved performance and code readability" />
   </component>
 </project>

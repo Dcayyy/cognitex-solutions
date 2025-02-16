@@ -20,6 +20,8 @@ const LandingPage = () => {
         setDrawerVisible(!drawerVisible);
     };
 
+    const { agentLoaded, openChat } = Voiceflow();
+
     const headerStyle = {
         background: 'transparent',
         position: 'absolute',
