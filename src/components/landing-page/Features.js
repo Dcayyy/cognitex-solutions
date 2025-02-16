@@ -45,6 +45,7 @@ const FeaturesSection = ({ isMobile }) => {
                             boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                             maxWidth: "375px",
                             padding: "1rem",
+                            margin: "0 auto",
                         }}
                     >
                         <Card.Meta
@@ -66,6 +67,7 @@ const FeaturesSection = ({ isMobile }) => {
                             boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                             maxWidth: "375px",
                             padding: "1rem",
+                            margin: "0 auto",
                         }}
                     >
                         <Card.Meta
@@ -87,6 +89,7 @@ const FeaturesSection = ({ isMobile }) => {
                             boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                             maxWidth: "375px",
                             padding: "1rem",
+                            margin: "0 auto",
                         }}
                     >
                         <Card.Meta
