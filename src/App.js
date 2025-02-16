@@ -1,7 +1,7 @@
 // src/App.js
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from "./components/LandingPage";
+import LandingPage from "./components/landing-page/LandingPage";
 import IntelligentAutomation from './components/IntelligentAutomation'; // your new page component
 import RealTimeInsights from './components/RealTimeInsights'; // your new page component
 import SeamlessIntegration from './components/SeamlessIntegration'; // your new page component
