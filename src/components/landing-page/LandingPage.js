@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {Layout, Grid, Divider} from 'antd';
 import logo from '../../assets/logo/logo.png';
 import HeaderNavigation from "./HeaderNavigation";
