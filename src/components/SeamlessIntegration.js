@@ -1,4 +1,3 @@
-// src/pages/SeamlessIntegration.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/SeamlessIntegration.css';
@@ -11,18 +10,15 @@ const SeamlessIntegration = ({ openChat }) => {
             </header>
 
             <div className="container fade-in">
-                {/* Back Button */}
                 <Link className="back-btn" to="/">
                     &larr; Back to Home
                 </Link>
 
-                {/* Introduction */}
                 <h2>What is Seamless Integration?</h2>
                 <p>
                     Seamless Integration is all about connecting your disparate systems and applications to work together effortlessly. Our solution ensures that data flows smoothly between platforms, eliminating silos and reducing manual effort.
                 </p>
 
-                {/* Video Placeholder */}
                 <div className="video-container">
                     <video autoPlay muted loop playsInline poster="/assets/images/placeholder-image.jpg">
                         <source src="../assets/videos/seamless-integration.mp4" type="video/mp4" />
@@ -30,7 +26,6 @@ const SeamlessIntegration = ({ openChat }) => {
                     </video>
                 </div>
 
-                {/* Key Benefits */}
                 <h2>Key Benefits</h2>
                 <ul>
                     <li>Unified view of your systems and data</li>
@@ -39,7 +34,6 @@ const SeamlessIntegration = ({ openChat }) => {
                     <li>Faster time-to-market with scalable integration solutions</li>
                 </ul>
 
-                {/* How It Works */}
                 <h2>How It Works</h2>
                 <p>
                     Our Seamless Integration solution uses advanced APIs and middleware to connect your existing software systems. By automating data exchange and workflow processes, it bridges the gap between legacy systems and modern applications.
@@ -53,7 +47,6 @@ const SeamlessIntegration = ({ openChat }) => {
                 <p>&copy; 2025 AI Automation. All Rights Reserved.</p>
             </footer>
 
-            {/* Floating Chat Button */}
             <div className="chat-btn" onClick={openChat}>
                 💬
             </div>

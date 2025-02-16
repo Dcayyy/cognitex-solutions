@@ -3,7 +3,7 @@ import {Layout, Grid, Divider} from 'antd';
 import logo from '../../assets/logo/logo.png';
 import HeaderNavigation from "./HeaderNavigation";
 import Footer from "../Footer";
-import { useVoiceflow } from "../Voiceflow";
+import { Voiceflow } from "../Voiceflow";
 import HeroSection from "./Hero";
 import FeaturesSection from "./Features";
 import About from "./About";
@@ -19,8 +19,6 @@ const LandingPage = () => {
     const toggleDrawer = () => {
         setDrawerVisible(!drawerVisible);
     };
-
-    const { agentLoaded, openChat } = useVoiceflow();
 
     const headerStyle = {
         background: 'transparent',

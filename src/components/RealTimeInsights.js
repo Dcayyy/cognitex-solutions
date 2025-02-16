@@ -1,4 +1,3 @@
-// src/pages/RealTimeInsights.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/RealTimeInsights.css';
@@ -11,18 +10,15 @@ const RealTimeInsights = ({ openChat }) => {
             </header>
 
             <div className="container fade-in">
-                {/* Back Button */}
                 <Link className="back-btn" to="/">
                     &larr; Back to Home
                 </Link>
 
-                {/* Introduction */}
                 <h2>What is Real-Time Insights?</h2>
                 <p>
                     Real-Time Insights empowers businesses with immediate access to critical data. Our solution harnesses advanced analytics and AI to provide up-to-the-minute information, enabling you to make fast, informed decisions that drive growth and performance.
                 </p>
 
-                {/* Video Placeholder */}
                 <div className="video-container">
                     <video autoPlay muted loop playsInline poster="/assets/images/placeholder-image.jpg">
                         <source src="../assets/videos/real-time-insights.mp4" type="video/mp4" />
@@ -30,7 +26,6 @@ const RealTimeInsights = ({ openChat }) => {
                     </video>
                 </div>
 
-                {/* Key Benefits */}
                 <h2>Key Benefits</h2>
                 <ul>
                     <li>Immediate access to real-time data</li>
@@ -39,7 +34,6 @@ const RealTimeInsights = ({ openChat }) => {
                     <li>Proactive response to market trends</li>
                 </ul>
 
-                {/* How It Works */}
                 <h2>How It Works</h2>
                 <p>
                     Our Real-Time Insights solution continuously monitors your data streams, transforming raw data into actionable insights through advanced analytics and AI. With interactive dashboards and instant alerts, you can respond proactively to emerging trends and optimize your operations in real time.
@@ -53,7 +47,6 @@ const RealTimeInsights = ({ openChat }) => {
                 <p>&copy; 2025 AI Automation. All Rights Reserved.</p>
             </footer>
 
-            {/* Floating Chat Button */}
             <div className="chat-btn" onClick={openChat}>
                 💬
             </div>
