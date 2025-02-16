@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d1e515f-fb6f-4f6a-a985-80d29e190505" name="Changes" comment="Improved Responsiveness, removed unused files">
-      <change afterPath="$PROJECT_DIR$/src/components/landing-page/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/videos/landing-page-vide.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/videos/landing-page-video.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LandingPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    <list default="true" id="8d1e515f-fb6f-4f6a-a985-80d29e190505" name="Changes" comment="Refactored website">
+      <change beforePath="$PROJECT_DIR$/src/components/landing-page/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing-page/LandingPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,7 @@
       <updated>1739473995854</updated>
       <workItem from="1739473996895" duration="5198000" />
       <workItem from="1739512382612" duration="2812000" />
-      <workItem from="1739654928749" duration="5009000" />
+      <workItem from="1739654928749" duration="5202000" />
     </task>
     <task id="LOCAL-00001" summary="changed index">
       <option name="closed" value="true" />
@@ -452,7 +447,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739684990062</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Refactored website">
+      <option name="closed" value="true" />
+      <created>1739686784495</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1739686784495</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Refactored website">
+      <option name="closed" value="true" />
+      <created>1739686816978</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1739686816978</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,6 +500,7 @@
     <MESSAGE value="Replace html/css website with React App" />
     <MESSAGE value="Added redirects file" />
     <MESSAGE value="Improved Responsiveness, removed unused files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved Responsiveness, removed unused files" />
+    <MESSAGE value="Refactored website" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored website" />
   </component>
 </project>

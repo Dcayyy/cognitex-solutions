@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Layout, Grid } from 'antd';
+import {Layout, Grid, Divider} from 'antd';
 import logo from '../../assets/logo/logo.png';
-import { LandingPageContent } from "./LandingPageContent";
 import HeaderNavigation from "./HeaderNavigation";
 import Footer from "../Footer";
 import { useVoiceflow } from "../Voiceflow";
+import HeroSection from "./Hero";
+import FeaturesSection from "./Features";
+import About from "./About";
+const { Content } = Layout;
 
 const { useBreakpoint } = Grid;
 
@@ -45,7 +48,14 @@ const LandingPage = () => {
                 toggleDrawer={toggleDrawer}
                 drawerVisible={drawerVisible}
             />
-            <LandingPageContent isMobile={isMobile}/>
+
+            <Content>
+                <HeroSection isMobile={isMobile} />
+                <FeaturesSection isMobile={isMobile} />
+                <Divider style={{ margin: "2rem 0", borderColor: "#ddd" }} />
+                <About isMobile={isMobile} />
+            </Content>
+
             <Footer />
         </Layout>
     );
