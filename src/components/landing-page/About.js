@@ -137,14 +137,14 @@ const AboutSection = ({ isMobile }) => {
                                         background: "#f7f7f7",
                                         borderRadius: "10px",
                                         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                                        minHeight: "145spx",
+                                        minHeight: "145px",
                                         display: "flex",
                                         flexDirection: "column",
                                         justifyContent: "center",
                                         alignItems: "center",
                                         textAlign: "center",
                                         margin: "0 auto",
-                                        padding: "0 20px",
+                                        padding: "10px 20px",
                                     }}
                                 >
                                     <div style={{ maxWidth: "250px", margin: "0 auto", padding: "0.4rem" }}>
