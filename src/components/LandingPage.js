@@ -385,8 +385,10 @@ const LandingPage = ({ openChat }) => {
                             solutions that help businesses thrive.
                         </Paragraph>
                     </div>
-                    <Row gutter={[16, 16]} justify="center">
-                        <Col xs={24} sm={12} md={8}>
+
+                    {/* Mission and Vision Row */}
+                    <Row gutter={[16, 16]} justify="center" style={{ marginBottom: '2rem' }}>
+                        <Col xs={isMobile ? 22 : 8}>
                             <MotionCard
                                 hoverable
                                 variants={cardVariants}
@@ -396,7 +398,10 @@ const LandingPage = ({ openChat }) => {
                                 style={{
                                     borderRadius: '10px',
                                     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                                    marginBottom: '1rem',
+                                    minHeight: '250px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
                                 }}
                             >
                                 <Card.Meta
@@ -407,7 +412,7 @@ const LandingPage = ({ openChat }) => {
                                 />
                             </MotionCard>
                         </Col>
-                        <Col xs={24} sm={12} md={8}>
+                        <Col xs={isMobile ? 22 : 8}>
                             <MotionCard
                                 hoverable
                                 variants={cardVariants}
@@ -417,7 +422,10 @@ const LandingPage = ({ openChat }) => {
                                 style={{
                                     borderRadius: '10px',
                                     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                                    marginBottom: '1rem',
+                                    minHeight: '250px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
                                 }}
                             >
                                 <Card.Meta
@@ -429,13 +437,15 @@ const LandingPage = ({ openChat }) => {
                             </MotionCard>
                         </Col>
                     </Row>
+
+                    {/* Our Values Row */}
                     <div style={{ textAlign: 'center', marginTop: '3rem' }}>
                         <Title level={3} style={{ color: '#333' }}>
                             Our Values
                         </Title>
                         <Row gutter={[16, 16]} justify="center">
                             {['Innovation', 'Quality', 'Collaboration', 'Integrity'].map((value) => (
-                                <Col key={value} xs={24} sm={12} md={6}>
+                                <Col key={value} xs={isMobile ? 22 : 6}>
                                     <MotionCard
                                         hoverable
                                         variants={cardVariants}
@@ -447,14 +457,20 @@ const LandingPage = ({ openChat }) => {
                                             background: '#f7f7f7',
                                             borderRadius: '10px',
                                             boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                                            minHeight: '220px',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            textAlign: 'center',
+                                            padding: '1rem',
                                         }}
                                     >
-                                        <Title level={4} style={{ color: '#333' }}>
+                                        <Title level={4} style={{ color: '#333', marginBottom: '0.5rem' }}>
                                             {value}
                                         </Title>
                                         <Paragraph style={{ color: '#666' }}>
-                                            {value === 'Innovation' &&
-                                                'Continuously exploring new technologies and approaches.'}
+                                            {value === 'Innovation' && 'Continuously exploring new technologies and approaches.'}
                                             {value === 'Quality' && 'Delivering exceptional results that exceed expectations.'}
                                             {value === 'Collaboration' && 'Fostering strong partnerships with our clients.'}
                                             {value === 'Integrity' && 'Conducting business with honesty and transparency.'}
