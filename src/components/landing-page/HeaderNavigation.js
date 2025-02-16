@@ -23,7 +23,7 @@ const HeaderNavigation = ({
                         // For mobile devices, move the logo down and to the left.
                         // Adjust these values until you like the positioning:
                         marginTop: isMobile ? "40px" : logoStyle.marginTop,
-                        marginLeft: isMobile ? "20px" : logoStyle.marginLeft,
+                        marginLeft: isMobile ? "-15px" : logoStyle.marginLeft,
                     }}
                 />
 
