@@ -40,7 +40,7 @@ const AboutSection = ({ isMobile }) => {
                         margin: "0 auto",
                         color: "#666",
                         textAlign: "justify",
-                        padding: isMobile ? "0.3rem 1.8rem" : "",
+                        padding: isMobile ? "0.3rem 1.1rem" : "",
                     }}
                 >
                     At Cognitex Solutions, we believe every idea holds the power to redefine the digital landscape.
