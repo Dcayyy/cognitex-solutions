@@ -40,9 +40,14 @@ const AboutSection = ({ isMobile }) => {
                         margin: "0 auto",
                         color: "#666",
                         textAlign: "justify",
+                        padding: isMobile ? "0.3rem 1.8rem" : "",
                     }}
                 >
-                    At Cognitex Solutions, we believe every idea holds the power to redefine the digital landscape. Our elite team of Artificial Intelligence engineers, architects, and strategists is dedicated to crafting innovative software solutions that propel your business to new heights. We combine cutting-edge technology with deep industry insights to transform complex challenges into strategic opportunities. With every project, we strive to exceed expectations and ignite growth, ensuring your business stands out in an increasingly competitive market. Join us on this transformative journey, where your vision meets our expertise, and watch as we create digital experiences that truly inspire.
+                    At Cognitex Solutions, we believe every idea holds the power to redefine the digital landscape.
+                    Our elite team of Artificial Intelligence engineers, architects, and strategists is dedicated to crafting innovative software solutions
+                    that propel your business to new heights. We combine cutting-edge technology with deep industry insights to transform complex challenges
+                    into strategic opportunities. Join us on this transformative journey, where your vision meets our expertise,
+                    and watch as we create digital experiences that truly inspire.
                 </Paragraph>
             </div>
 
