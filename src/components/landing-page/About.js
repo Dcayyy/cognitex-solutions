@@ -39,12 +39,10 @@ const AboutSection = ({ isMobile }) => {
                         maxWidth: "600px",
                         margin: "0 auto",
                         color: "#666",
+                        textAlign: "justify",
                     }}
                 >
-                    At Cognitex Solutions, we're passionate about transforming ideas into
-                    impactful digital experiences. Our team of skilled developers,
-                    designers, and strategists is dedicated to crafting innovative software
-                    solutions that help businesses thrive.
+                    At Cognitex Solutions, we believe every idea holds the power to redefine the digital landscape. Our elite team of Artificial Intelligence engineers, architects, and strategists is dedicated to crafting innovative software solutions that propel your business to new heights. We combine cutting-edge technology with deep industry insights to transform complex challenges into strategic opportunities. With every project, we strive to exceed expectations and ignite growth, ensuring your business stands out in an increasingly competitive market. Join us on this transformative journey, where your vision meets our expertise, and watch as we create digital experiences that truly inspire.
                 </Paragraph>
             </div>
 
@@ -78,8 +76,7 @@ const AboutSection = ({ isMobile }) => {
                                 Mission
                             </Title>
                             <Paragraph style={{ margin: 0 }}>
-                                Our mission is to empower businesses through innovative software
-                                solutions.
+                                Our mission is to revolutionize business with AI automation—unlocking efficiency, innovation, and growth.
                             </Paragraph>
                         </div>
                     </MotionCard>
@@ -113,7 +110,7 @@ const AboutSection = ({ isMobile }) => {
                                 Vision
                             </Title>
                             <Paragraph style={{ margin: 0 }}>
-                                To be the leading provider of cutting-edge technology solutions.
+                                To be the leading provider of cutting-edge AI technology solutions.
                             </Paragraph>
                         </div>
                     </MotionCard>
@@ -157,9 +154,9 @@ const AboutSection = ({ isMobile }) => {
                                             {value === "Quality" &&
                                                 "Delivering exceptional results that exceed expectations."}
                                             {value === "Collaboration" &&
-                                                "Fostering strong partnerships with our clients."}
+                                                "Building lasting partnerships that drive collective success."}
                                             {value === "Integrity" &&
-                                                "Conducting business with honesty and transparency."}
+                                                "Upholding unwavering honesty and transparency in everything we do."}
                                         </Paragraph>
                                     </div>
                                 </MotionCard>

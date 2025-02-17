@@ -73,7 +73,7 @@ const FeaturesSection = ({ isMobile }) => {
                         <Card.Meta
                             avatar={<LineChartOutlined style={{ fontSize: "1.8rem", color: "#ff7f50" }} />}
                             title="Real-Time Insights"
-                            description="Gain actionable insights through powerful analytics and data-driven intelligence."
+                            description="Access live data and detailed metrics to identify opportunities, optimize performance, and fuel your business's success."
                         />
                     </MotionCard>
                 </Col>
