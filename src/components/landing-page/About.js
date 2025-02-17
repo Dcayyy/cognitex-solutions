@@ -81,7 +81,7 @@ const AboutSection = ({ isMobile }) => {
                                 Mission
                             </Title>
                             <Paragraph style={{ margin: 0 }}>
-                                Our mission is to revolutionize business with AI automation—unlocking efficiency, innovation, and growth.
+                                Our mission is to revolutionize business with AI automation, and unlocking efficiency, innovation, and growth.
                             </Paragraph>
                         </div>
                     </MotionCard>
